@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEU BLOG: uma coleção de músicas</title>
+    <style>
+        header {
+            background-color: #4dd14b;
+            color: hwb(120 4% 73%);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            background-color: #35c033;
+            color: rgb(14, 98, 20);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        article {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 10px; /* espaçamento interno */
+            border: 1px solid rgb(14, 98, 20); /* borda para destacar */
+            border-radius: 8px; /* bordas arredondadas */
+            background-color: #d9fcd9; /* leve contraste */
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+
+        .direitos {
+            text-align: center;
+            color: rgb(14, 98, 20);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>⋆｡𖦹 ˚ 𓇼 ˚｡⋆ MEU BLOG: uma coleção de músicas ⋆｡𖦹 ˚ 𓇼 ˚｡⋆</h1>
+        <p>Compartilhando o conhecimento de músicas e melodias ૮ ˶ᵔ ᵕ ᵔ˶ °</p>
+    </header>
+
+    <main>
+        <article> 
+            <img src="https://github.com/fernandatakeda-ui/p-gina-web-zero-fernanda-2026-1b/blob/main/imagem-blog.png?raw=true" alt="Ilustração de notas musicais">
+            <div>
+                <p class="artigo-autor">meu blog: uma coleção músical .☘︎ ݁˖</p>
+                <h2>Meu primeiro post :]</h2>
+                <p>Por: Fernanda Takeda</p>
+                <p>Boas vindas: sejam todos bem vindos ao meu blog! °‧ 𓆝 𓆟 𓆞 ·｡</p>
+                <button>👽<span>0</span></button>
+                <button>🎶<span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="https://github.com/fernandatakeda-ui/p-gina-web-zero-fernanda-2026-1b/blob/main/segundo-post.png?raw=true" alt="Ilustração de ranking musical">
+            <div>
+                <p class="artigo-autor">meu blog: uma coleção músical .☘︎ ݁˖</p>
+                <h2>Ranking das minhas músicas favoritas °‧ 𓆝 𓆟 𓆞 ·｡</h2>
+                <p>Por: Fernanda Takeda</p>
+                <ul>
+                    <li>1. Bruxa - Kamaitachi</li>
+                    <li>2. Me chamando de paixão - Jorge Ben Jor</li>
+                    <li>3. Modus Operandi - Yago Oproprio</li>
+                    <li>4. Impostor Syndrome - Sidney Gish</li>
+                    <li>5. Ma Meilleure Ennemie - Arcane</li>
+                </ul>
+                <button>🎶<span>0</span></button>
+                <button>🍀<span>0</span></button>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p class="direitos"> Todos direitos estão reservados ao autor do blog - Fernanda Yamamoto Takeda</p>
+    </footer>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function(botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            let texto = botao.querySelector("span"); 
+            let quantidadeAtual = Number(texto.textContent);
+
+            if (curtiu === false) {
+                texto.textContent = quantidadeAtual + 1;
+                curtiu = true;
+            } else {
+                texto.textContent = quantidadeAtual - 1;
+                curtiu = false;
+            }
+        }
+    });
+</script>
+</html>
